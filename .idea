@@ -1,0 +1,12 @@
+rails g model user name:string email:string password_digest:string, reole:integer;
+
+rails generate model Project name:string start_date:date duration:string end_date:date;
+
+rails generate model Task name:string description:text start_time:datetime end_time:datetime duration:string project:references;
+
+rails generate model ProjectAssignment user:references project:references;
+
+rails generate model Role user:references null: false, foreign_key: true
+
+
+rails g scaffold Project name:string start_date:date duration:string --skip-views
