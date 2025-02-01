@@ -1,24 +1,64 @@
-# README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+# Prerequisites
+Backend:
+- Rbenv
+- Ruby 2.7.7
+- Rails 6
+- Postgres
+- Bundler: 2.4.22
 
-Things you may want to cover:
+Frontend:
+- nvm
+- node v19.7.0
+- pnpm
 
-* Ruby version
+# Setup The Project
+Clone the project
+```
+git clone git@github.com:aapiw/project_management.git
+```
 
-* System dependencies
+And then execute:
+```bash
+cd project_management && bundle install
+```
 
-* Configuration
+Setup the DB:
+Update username & password of config/database.yml accordingly
 
-* Database creation
+```
+RAILS_ENV=development rails db:drop; rails db:create; rails db:migrate; rails db:seed;
+```
 
-* Database initialization
+# Run The Project
+Run the Backend:
+```
+cd project_management && rails s
+```
 
-* How to run the test suite
+Run the Frontend in a new tab:
+```
+cd project_management && bin/vite dev
+```
 
-* Services (job queues, cache servers, search engines, etc.)
+# Accounts
+Admin:
 
-* Deployment instructions
+user: admin@yopmail.com
 
-* ...
+password: password
+
+User:
+
+user: user1@yopmail.com
+
+password: password
+
+Also can check from `db/seeds.rb`
+
+# API
+Documentation:
+https://documenter.getpostman.com/view/33611537/2sAYX3qhzC
+
+Also can export the json postman collection available in the root
+`Project Management.postman_collection.json`

@@ -1,0 +1,1267 @@
+{
+	"info": {
+		"_postman_id": "efea73b7-7f79-4661-9e22-aa368a5cd402",
+		"name": "Project Management",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "33611537"
+	},
+	"item": [
+		{
+			"name": "auth",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "email",
+							"value": "admin@yopmail.com",
+							"description": "admin",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "password",
+							"value": "password",
+							"description": "admin",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "email",
+							"value": "user1@yopmail.com",
+							"description": "non admin",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "password",
+							"description": "non admin",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{BASE_URI}}/api/v1.0.0/auth/login",
+					"host": [
+						"{{BASE_URI}}"
+					],
+					"path": [
+						"api",
+						"v1.0.0",
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "auth",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "email",
+									"value": "admin@yopmail.com",
+									"description": "admin",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "password",
+									"value": "password",
+									"description": "admin",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "email",
+									"value": "user1@yopmail.com",
+									"description": "non admin",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "password",
+									"description": "non admin",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/v1.0.0/auth/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1.0.0",
+								"auth",
+								"login"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Frame-Options",
+							"value": "SAMEORIGIN"
+						},
+						{
+							"key": "X-XSS-Protection",
+							"value": "1; mode=block"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-Download-Options",
+							"value": "noopen"
+						},
+						{
+							"key": "X-Permitted-Cross-Domain-Policies",
+							"value": "none"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "strict-origin-when-cross-origin"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"b13c98b31bcfa667065dc6c14929b7cf\""
+						},
+						{
+							"key": "Cache-Control",
+							"value": "max-age=0, private, must-revalidate"
+						},
+						{
+							"key": "X-Request-Id",
+							"value": "c6bf44e5-9ade-4026-b74f-23c137ffc110"
+						},
+						{
+							"key": "X-Runtime",
+							"value": "0.430142"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"token\": \"eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyLCJleHAiOjE3NDA4MzY5Mjd9.4zy7aCtGcoySvked4-ygbt4rup8rfWzlFFAEyZ7m6T8\",\n    \"exp\": \"03-04-2025 07:17\",\n    \"email\": \"user1@yopmail.com\",\n    \"name\": \"User 1\",\n    \"role\": \"user\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Admin/Users",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE3NDA3MzI2MzB9.RUMWUA_58KoUUIySvDNlWSqCcobc6pesIFTp33vT8O0",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{BASE_URI}}/api/v1.0.0/admin/users",
+					"host": [
+						"{{BASE_URI}}"
+					],
+					"path": [
+						"api",
+						"v1.0.0",
+						"admin",
+						"users"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Admin/Users",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE3NDA3MzI2MzB9.RUMWUA_58KoUUIySvDNlWSqCcobc6pesIFTp33vT8O0",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3000/api/v1.0.0/admin/users",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1.0.0",
+								"admin",
+								"users"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Frame-Options",
+							"value": "SAMEORIGIN"
+						},
+						{
+							"key": "X-XSS-Protection",
+							"value": "1; mode=block"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-Download-Options",
+							"value": "noopen"
+						},
+						{
+							"key": "X-Permitted-Cross-Domain-Policies",
+							"value": "none"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "strict-origin-when-cross-origin"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"8560d799a379851ba1aea995697b99e0\""
+						},
+						{
+							"key": "Cache-Control",
+							"value": "max-age=0, private, must-revalidate"
+						},
+						{
+							"key": "X-Request-Id",
+							"value": "a3330ffb-bbc1-42c3-b0ae-4cb58b87fb01"
+						},
+						{
+							"key": "X-Runtime",
+							"value": "0.023122"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"total_count\": 6,\n    \"status\": 200,\n    \"success\": true,\n    \"data\": [\n        {\n            \"id\": 2,\n            \"name\": \"User 1\",\n            \"email\": \"user1@yopmail.com\"\n        },\n        {\n            \"id\": 3,\n            \"name\": \"User 2\",\n            \"email\": \"user2@yopmail.com\"\n        },\n        {\n            \"id\": 4,\n            \"name\": \"User 3\",\n            \"email\": \"user3@yopmail.com\"\n        },\n        {\n            \"id\": 5,\n            \"name\": \"User 4\",\n            \"email\": \"user4@yopmail.com\"\n        },\n        {\n            \"id\": 6,\n            \"name\": \"User 5\",\n            \"email\": \"user5@yopmail.com\"\n        },\n        {\n            \"id\": 7,\n            \"name\": \"User 6\",\n            \"email\": \"user6@yopmail.com\"\n        }\n    ]\n}"
+				}
+			]
+		},
+		{
+			"name": "Admin/Active Projects",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE3NDA3MzI2MzB9.RUMWUA_58KoUUIySvDNlWSqCcobc6pesIFTp33vT8O0",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{BASE_URI}}/api/v1.0.0/admin/projects?active=true",
+					"host": [
+						"{{BASE_URI}}"
+					],
+					"path": [
+						"api",
+						"v1.0.0",
+						"admin",
+						"projects"
+					],
+					"query": [
+						{
+							"key": "active",
+							"value": "true"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Admin/Active Projects",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE3NDA3MzI2MzB9.RUMWUA_58KoUUIySvDNlWSqCcobc6pesIFTp33vT8O0",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3000/api/v1.0.0/admin/projects?active=true",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1.0.0",
+								"admin",
+								"projects"
+							],
+							"query": [
+								{
+									"key": "active",
+									"value": "true"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Frame-Options",
+							"value": "SAMEORIGIN"
+						},
+						{
+							"key": "X-XSS-Protection",
+							"value": "1; mode=block"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-Download-Options",
+							"value": "noopen"
+						},
+						{
+							"key": "X-Permitted-Cross-Domain-Policies",
+							"value": "none"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "strict-origin-when-cross-origin"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"032b606439b9f7944cee0bd1ce117040\""
+						},
+						{
+							"key": "Cache-Control",
+							"value": "max-age=0, private, must-revalidate"
+						},
+						{
+							"key": "X-Request-Id",
+							"value": "c17f7693-e581-41c1-952e-541aacf19698"
+						},
+						{
+							"key": "X-Runtime",
+							"value": "0.063707"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": 200,\n    \"success\": true,\n    \"data\": [\n        {\n            \"id\": 1,\n            \"name\": \"Project 1\",\n            \"start_date\": \"2025-01-02\",\n            \"duration\": \"5 months\",\n            \"total_task_duration\": \"hour\",\n            \"assigned_users\": [\n                {\n                    \"id\": 3,\n                    \"name\": \"User 2\",\n                    \"role\": \"user\"\n                },\n                {\n                    \"id\": 4,\n                    \"name\": \"User 3\",\n                    \"role\": \"user\"\n                },\n                {\n                    \"id\": 5,\n                    \"name\": \"User 4\",\n                    \"role\": \"user\"\n                },\n                {\n                    \"id\": 6,\n                    \"name\": \"User 5\",\n                    \"role\": \"user\"\n                },\n                {\n                    \"id\": 7,\n                    \"name\": \"User 6\",\n                    \"role\": \"user\"\n                }\n            ],\n            \"available_users\": [\n                {\n                    \"id\": 2,\n                    \"name\": \"User 1\",\n                    \"role\": \"user\"\n                }\n            ]\n        },\n        {\n            \"id\": 2,\n            \"name\": \"Project 2\",\n            \"start_date\": \"2025-01-02\",\n            \"duration\": \"6 months\",\n            \"total_task_duration\": \"5 hours\",\n            \"assigned_users\": [\n                {\n                    \"id\": 2,\n                    \"name\": \"User 1\",\n                    \"role\": \"user\"\n                },\n                {\n                    \"id\": 3,\n                    \"name\": \"User 2\",\n                    \"role\": \"user\"\n                },\n                {\n                    \"id\": 4,\n                    \"name\": \"User 3\",\n                    \"role\": \"user\"\n                },\n                {\n                    \"id\": 5,\n                    \"name\": \"User 4\",\n                    \"role\": \"user\"\n                },\n                {\n                    \"id\": 6,\n                    \"name\": \"User 5\",\n                    \"role\": \"user\"\n                }\n            ],\n            \"available_users\": [\n                {\n                    \"id\": 7,\n                    \"name\": \"User 6\",\n                    \"role\": \"user\"\n                }\n            ]\n        },\n        {\n            \"id\": 3,\n            \"name\": \"Project 3\",\n            \"start_date\": \"2025-01-27\",\n            \"duration\": \"4 months\",\n            \"total_task_duration\": \"10 hours\",\n            \"assigned_users\": [\n                {\n                    \"id\": 2,\n                    \"name\": \"User 1\",\n                    \"role\": \"user\"\n                },\n                {\n                    \"id\": 4,\n                    \"name\": \"User 3\",\n                    \"role\": \"user\"\n                },\n                {\n                    \"id\": 5,\n                    \"name\": \"User 4\",\n                    \"role\": \"user\"\n                },\n                {\n                    \"id\": 6,\n                    \"name\": \"User 5\",\n                    \"role\": \"user\"\n                }\n            ],\n            \"available_users\": [\n                {\n                    \"id\": 3,\n                    \"name\": \"User 2\",\n                    \"role\": \"user\"\n                },\n                {\n                    \"id\": 7,\n                    \"name\": \"User 6\",\n                    \"role\": \"user\"\n                }\n            ]\n        },\n        {\n            \"id\": 4,\n            \"name\": \"Project 4\",\n            \"start_date\": \"2025-01-24\",\n            \"duration\": \"5 months\",\n            \"total_task_duration\": \"hour\",\n            \"assigned_users\": [\n                {\n                    \"id\": 2,\n                    \"name\": \"User 1\",\n                    \"role\": \"user\"\n                },\n                {\n                    \"id\": 3,\n                    \"name\": \"User 2\",\n                    \"role\": \"user\"\n                },\n                {\n                    \"id\": 4,\n                    \"name\": \"User 3\",\n                    \"role\": \"user\"\n                },\n                {\n                    \"id\": 5,\n                    \"name\": \"User 4\",\n                    \"role\": \"user\"\n                },\n                {\n                    \"id\": 6,\n                    \"name\": \"User 5\",\n                    \"role\": \"user\"\n                },\n                {\n                    \"id\": 7,\n                    \"name\": \"User 6\",\n                    \"role\": \"user\"\n                }\n            ],\n            \"available_users\": []\n        }\n    ]\n}"
+				}
+			]
+		},
+		{
+			"name": "Admin/Project Assign Users",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE3NDA3MTQzMTR9.DDyILVo6Niv_EF5BD6nNIGau11pPqBUtCxLf2rIe2aw",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"user_ids\" : [1,2,3,4,5,6]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BASE_URI}}/api/v1.0.0/admin/projects/1/assign_users",
+					"host": [
+						"{{BASE_URI}}"
+					],
+					"path": [
+						"api",
+						"v1.0.0",
+						"admin",
+						"projects",
+						"1",
+						"assign_users"
+					],
+					"query": [
+						{
+							"key": "sd",
+							"value": null,
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Admin/Project Assign Users",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE3NDA3MTQzMTR9.DDyILVo6Niv_EF5BD6nNIGau11pPqBUtCxLf2rIe2aw",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"user_ids\" : [1,2,3,4,5,6]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/v1.0.0/admin/projects/1/assign_users",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1.0.0",
+								"admin",
+								"projects",
+								"1",
+								"assign_users"
+							],
+							"query": [
+								{
+									"key": "sd",
+									"value": null,
+									"disabled": true
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Frame-Options",
+							"value": "SAMEORIGIN"
+						},
+						{
+							"key": "X-XSS-Protection",
+							"value": "1; mode=block"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-Download-Options",
+							"value": "noopen"
+						},
+						{
+							"key": "X-Permitted-Cross-Domain-Policies",
+							"value": "none"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "strict-origin-when-cross-origin"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"9ecc02638051ccc400ac56ad9354bb26\""
+						},
+						{
+							"key": "Cache-Control",
+							"value": "max-age=0, private, must-revalidate"
+						},
+						{
+							"key": "X-Request-Id",
+							"value": "78130454-4cc3-41bc-8f82-4b36baf18861"
+						},
+						{
+							"key": "X-Runtime",
+							"value": "0.078451"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": 200,\n    \"success\": true,\n    \"project\": 1,\n    \"user_ids\": [\n        1,\n        3,\n        4,\n        5,\n        6,\n        7,\n        2\n    ]\n}"
+				}
+			]
+		},
+		{
+			"name": "Admin/Project Unassign Users",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE3NDA3MTQzMTR9.DDyILVo6Niv_EF5BD6nNIGau11pPqBUtCxLf2rIe2aw",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"user_ids\" : [1,2]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BASE_URI}}/api/v1.0.0/admin/projects/1/unassign_users",
+					"host": [
+						"{{BASE_URI}}"
+					],
+					"path": [
+						"api",
+						"v1.0.0",
+						"admin",
+						"projects",
+						"1",
+						"unassign_users"
+					],
+					"query": [
+						{
+							"key": "sd",
+							"value": null,
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Admin/Project Unassign Users",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE3NDA3MTQzMTR9.DDyILVo6Niv_EF5BD6nNIGau11pPqBUtCxLf2rIe2aw",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"user_ids\" : [1,2]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/v1.0.0/admin/projects/1/unassign_users",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1.0.0",
+								"admin",
+								"projects",
+								"1",
+								"unassign_users"
+							],
+							"query": [
+								{
+									"key": "sd",
+									"value": null,
+									"disabled": true
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Frame-Options",
+							"value": "SAMEORIGIN"
+						},
+						{
+							"key": "X-XSS-Protection",
+							"value": "1; mode=block"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-Download-Options",
+							"value": "noopen"
+						},
+						{
+							"key": "X-Permitted-Cross-Domain-Policies",
+							"value": "none"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "strict-origin-when-cross-origin"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"8629be5f8777e369904b7befb5c6319f\""
+						},
+						{
+							"key": "Cache-Control",
+							"value": "max-age=0, private, must-revalidate"
+						},
+						{
+							"key": "X-Request-Id",
+							"value": "2785853d-6fba-473b-af91-3ebef3dd15f5"
+						},
+						{
+							"key": "X-Runtime",
+							"value": "0.079466"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": 200,\n    \"success\": true,\n    \"project\": 1,\n    \"user_ids\": [\n        3,\n        4,\n        5,\n        6,\n        7\n    ]\n}"
+				}
+			]
+		},
+		{
+			"name": "User/Projects",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyLCJleHAiOjE3NDA4MjczNTZ9.Fc7qpmJWdFZci4Q7UKewiXF8nVzT_B8zE0yHOSuDPsA",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "// UN ASSIGNE USER\r\n// {\r\n//     \"user_id\" : null\r\n// }\r\n\r\n// ASSIGNE USER\r\n{\r\n    \"user_id\" : 1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BASE_URI}}/api/v1.0.0/user/projects",
+					"host": [
+						"{{BASE_URI}}"
+					],
+					"path": [
+						"api",
+						"v1.0.0",
+						"user",
+						"projects"
+					],
+					"query": [
+						{
+							"key": "sd",
+							"value": null,
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "User/Projects",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyLCJleHAiOjE3NDA4MjczNTZ9.Fc7qpmJWdFZci4Q7UKewiXF8nVzT_B8zE0yHOSuDPsA",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "// UN ASSIGNE USER\r\n// {\r\n//     \"user_id\" : null\r\n// }\r\n\r\n// ASSIGNE USER\r\n{\r\n    \"user_id\" : 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/v1.0.0/user/projects",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1.0.0",
+								"user",
+								"projects"
+							],
+							"query": [
+								{
+									"key": "sd",
+									"value": null,
+									"disabled": true
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Frame-Options",
+							"value": "SAMEORIGIN"
+						},
+						{
+							"key": "X-XSS-Protection",
+							"value": "1; mode=block"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-Download-Options",
+							"value": "noopen"
+						},
+						{
+							"key": "X-Permitted-Cross-Domain-Policies",
+							"value": "none"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "strict-origin-when-cross-origin"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"4b6a54523ff8c9135448a9bf34c5be66\""
+						},
+						{
+							"key": "Cache-Control",
+							"value": "max-age=0, private, must-revalidate"
+						},
+						{
+							"key": "X-Request-Id",
+							"value": "5ec7c5a9-7c6f-418c-bcb3-644e4204ba5c"
+						},
+						{
+							"key": "X-Runtime",
+							"value": "0.040267"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"total_count\": 3,\n    \"status\": 200,\n    \"success\": true,\n    \"data\": [\n        {\n            \"id\": 2,\n            \"name\": \"Project 2\",\n            \"start_date\": \"2025-01-02\",\n            \"duration\": \"6 months\",\n            \"assigned_tasks\": [\n                {\n                    \"id\": 8,\n                    \"name\": \"Backend Setup 3\",\n                    \"description\": \"Backend setup desc\",\n                    \"start_time\": \"2025-02-10T04:00:00.000Z\",\n                    \"end_time\": \"2025-02-10T10:00:00.000Z\",\n                    \"duration\": \"5 hours\",\n                    \"created_at\": \"2025-02-01T11:15:25.364Z\",\n                    \"updated_at\": \"2025-02-01T11:15:25.364Z\"\n                }\n            ]\n        },\n        {\n            \"id\": 3,\n            \"name\": \"Project 3\",\n            \"start_date\": \"2025-01-27\",\n            \"duration\": \"4 months\",\n            \"assigned_tasks\": [\n                {\n                    \"id\": 4,\n                    \"name\": \"Backend Setup 3\",\n                    \"description\": \"Backend setup desc\",\n                    \"start_time\": \"2025-02-10T04:00:00.000Z\",\n                    \"end_time\": \"2025-02-10T10:00:00.000Z\",\n                    \"duration\": \"5 hours\",\n                    \"created_at\": \"2025-02-01T11:15:25.344Z\",\n                    \"updated_at\": \"2025-02-01T11:51:19.686Z\"\n                },\n                {\n                    \"id\": 6,\n                    \"name\": \"Backend Setup\",\n                    \"description\": \"Backend setup desc\",\n                    \"start_time\": \"2025-01-28T04:00:00.000Z\",\n                    \"end_time\": \"2025-01-28T10:00:00.000Z\",\n                    \"duration\": \"5 hours\",\n                    \"created_at\": \"2025-02-01T11:15:25.354Z\",\n                    \"updated_at\": \"2025-02-01T11:51:22.217Z\"\n                }\n            ]\n        },\n        {\n            \"id\": 4,\n            \"name\": \"Project 4\",\n            \"start_date\": \"2025-01-24\",\n            \"duration\": \"5 months\",\n            \"assigned_tasks\": []\n        }\n    ]\n}"
+				}
+			]
+		},
+		{
+			"name": "User/Tasks",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyLCJleHAiOjE3NDA4MjczNTZ9.Fc7qpmJWdFZci4Q7UKewiXF8nVzT_B8zE0yHOSuDPsA",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "// UN ASSIGNE USER\r\n// {\r\n//     \"user_id\" : null\r\n// }\r\n\r\n// ASSIGNE USER\r\n{\r\n    \"user_id\" : 1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BASE_URI}}/api/v1.0.0/user/tasks",
+					"host": [
+						"{{BASE_URI}}"
+					],
+					"path": [
+						"api",
+						"v1.0.0",
+						"user",
+						"tasks"
+					],
+					"query": [
+						{
+							"key": "sd",
+							"value": null,
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "User/Tasks",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyLCJleHAiOjE3NDA4MjczNTZ9.Fc7qpmJWdFZci4Q7UKewiXF8nVzT_B8zE0yHOSuDPsA",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "// UN ASSIGNE USER\r\n// {\r\n//     \"user_id\" : null\r\n// }\r\n\r\n// ASSIGNE USER\r\n{\r\n    \"user_id\" : 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/v1.0.0/user/tasks",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1.0.0",
+								"user",
+								"tasks"
+							],
+							"query": [
+								{
+									"key": "sd",
+									"value": null,
+									"disabled": true
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Frame-Options",
+							"value": "SAMEORIGIN"
+						},
+						{
+							"key": "X-XSS-Protection",
+							"value": "1; mode=block"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-Download-Options",
+							"value": "noopen"
+						},
+						{
+							"key": "X-Permitted-Cross-Domain-Policies",
+							"value": "none"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "strict-origin-when-cross-origin"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"3ec5e9683a2a03f306ca5b623abf1827\""
+						},
+						{
+							"key": "Cache-Control",
+							"value": "max-age=0, private, must-revalidate"
+						},
+						{
+							"key": "X-Request-Id",
+							"value": "75a4d0c2-2f10-4f44-8665-bb812fa35a3f"
+						},
+						{
+							"key": "X-Runtime",
+							"value": "0.039133"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": 200,\n    \"success\": true,\n    \"data\": {\n        \"available_tasks\": [\n            {\n                \"id\": 2,\n                \"name\": \"Backend Setup\",\n                \"description\": \"Backend setup desc\",\n                \"start_time\": \"2025-01-28T04:00:00.000Z\",\n                \"end_time\": \"2025-01-28T10:00:00.000Z\",\n                \"duration\": 5,\n                \"project_id\": null\n            },\n            {\n                \"id\": 12,\n                \"name\": \"Task 4\",\n                \"description\": \"Task 4\",\n                \"start_time\": \"2025-03-10T04:00:00.000Z\",\n                \"end_time\": \"2025-03-10T10:00:00.000Z\",\n                \"duration\": 5,\n                \"project_id\": null\n            },\n            {\n                \"id\": 9,\n                \"name\": \"Task 1\",\n                \"description\": \"Task 1\",\n                \"start_time\": \"2025-03-28T01:00:00.000Z\",\n                \"end_time\": \"2025-03-28T03:00:00.000Z\",\n                \"duration\": 2,\n                \"project_id\": null\n            },\n            {\n                \"id\": 10,\n                \"name\": \"Task 2\",\n                \"description\": \"Task 2\",\n                \"start_time\": \"2025-03-28T04:00:00.000Z\",\n                \"end_time\": \"2025-03-28T10:00:00.000Z\",\n                \"duration\": 5,\n                \"project_id\": null\n            },\n            {\n                \"id\": 3,\n                \"name\": \"Homepage Design 2\",\n                \"description\": \"Homepage design desc\",\n                \"start_time\": \"2025-02-10T01:00:00.000Z\",\n                \"end_time\": \"2025-02-10T03:00:00.000Z\",\n                \"duration\": 2,\n                \"project_id\": null\n            },\n            {\n                \"id\": 11,\n                \"name\": \"Task 3\",\n                \"description\": \"Task 3\",\n                \"start_time\": \"2025-03-10T01:00:00.000Z\",\n                \"end_time\": \"2025-03-10T03:00:00.000Z\",\n                \"duration\": 2,\n                \"project_id\": null\n            },\n            {\n                \"id\": 5,\n                \"name\": \"Homepage Design\",\n                \"description\": \"Homepage design desc\",\n                \"start_time\": \"2025-01-28T01:00:00.000Z\",\n                \"end_time\": \"2025-01-28T03:00:00.000Z\",\n                \"duration\": 2,\n                \"project_id\": null\n            },\n            {\n                \"id\": 1,\n                \"name\": \"Homepage Design\",\n                \"description\": \"Homepage design desc\",\n                \"start_time\": \"2025-01-28T01:00:00.000Z\",\n                \"end_time\": \"2025-01-28T03:00:00.000Z\",\n                \"duration\": 2,\n                \"project_id\": null\n            },\n            {\n                \"id\": 7,\n                \"name\": \"Homepage Design 2\",\n                \"description\": \"Homepage design desc\",\n                \"start_time\": \"2025-02-10T01:00:00.000Z\",\n                \"end_time\": \"2025-02-10T03:00:00.000Z\",\n                \"duration\": 2,\n                \"project_id\": null\n            }\n        ]\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "User/Project Assign Tasks",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyLCJleHAiOjE3NDA4MjczNTZ9.Fc7qpmJWdFZci4Q7UKewiXF8nVzT_B8zE0yHOSuDPsA",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"task_ids\" : [1,2,3]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BASE_URI}}/api/v1.0.0/user/projects/2/assign_tasks",
+					"host": [
+						"{{BASE_URI}}"
+					],
+					"path": [
+						"api",
+						"v1.0.0",
+						"user",
+						"projects",
+						"2",
+						"assign_tasks"
+					],
+					"query": [
+						{
+							"key": "sd",
+							"value": null,
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "User/Project Assign Tasks",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyLCJleHAiOjE3NDA4MjczNTZ9.Fc7qpmJWdFZci4Q7UKewiXF8nVzT_B8zE0yHOSuDPsA",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"task_ids\" : [1,2,3]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/v1.0.0/user/projects/2/assign_tasks",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1.0.0",
+								"user",
+								"projects",
+								"2",
+								"assign_tasks"
+							],
+							"query": [
+								{
+									"key": "sd",
+									"value": null,
+									"disabled": true
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Frame-Options",
+							"value": "SAMEORIGIN"
+						},
+						{
+							"key": "X-XSS-Protection",
+							"value": "1; mode=block"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-Download-Options",
+							"value": "noopen"
+						},
+						{
+							"key": "X-Permitted-Cross-Domain-Policies",
+							"value": "none"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "strict-origin-when-cross-origin"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"c38ba937d54c3483b23c94eabf47542a\""
+						},
+						{
+							"key": "Cache-Control",
+							"value": "max-age=0, private, must-revalidate"
+						},
+						{
+							"key": "X-Request-Id",
+							"value": "3ad4d7a6-1e56-41f8-bcf3-1abf58fde522"
+						},
+						{
+							"key": "X-Runtime",
+							"value": "0.022438"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": 200,\n    \"success\": true,\n    \"project\": 2,\n    \"task_ids\": [\n        8,\n        1,\n        2,\n        3,\n        4,\n        5,\n        6,\n        7\n    ]\n}"
+				}
+			]
+		},
+		{
+			"name": "User/Project Unassign Tasks",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyLCJleHAiOjE3NDA4MjczNTZ9.Fc7qpmJWdFZci4Q7UKewiXF8nVzT_B8zE0yHOSuDPsA",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"task_ids\" : [1,2,3]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BASE_URI}}/api/v1.0.0/user/projects/2/unassign_tasks",
+					"host": [
+						"{{BASE_URI}}"
+					],
+					"path": [
+						"api",
+						"v1.0.0",
+						"user",
+						"projects",
+						"2",
+						"unassign_tasks"
+					],
+					"query": [
+						{
+							"key": "sd",
+							"value": null,
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "User/Project Unassign Tasks",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyLCJleHAiOjE3NDA4MjczNTZ9.Fc7qpmJWdFZci4Q7UKewiXF8nVzT_B8zE0yHOSuDPsA",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"task_ids\" : [1,2,3]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/v1.0.0/user/projects/2/unassign_tasks",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1.0.0",
+								"user",
+								"projects",
+								"2",
+								"unassign_tasks"
+							],
+							"query": [
+								{
+									"key": "sd",
+									"value": null,
+									"disabled": true
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Frame-Options",
+							"value": "SAMEORIGIN"
+						},
+						{
+							"key": "X-XSS-Protection",
+							"value": "1; mode=block"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-Download-Options",
+							"value": "noopen"
+						},
+						{
+							"key": "X-Permitted-Cross-Domain-Policies",
+							"value": "none"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "strict-origin-when-cross-origin"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"8a2e6be710b8b663044d817a6880d422\""
+						},
+						{
+							"key": "Cache-Control",
+							"value": "max-age=0, private, must-revalidate"
+						},
+						{
+							"key": "X-Request-Id",
+							"value": "944645e8-d3ce-48e3-adcb-8b8ddbcf66d2"
+						},
+						{
+							"key": "X-Runtime",
+							"value": "0.057429"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": 200,\n    \"success\": true,\n    \"project\": 2,\n    \"task_ids\": [\n        8,\n        4,\n        5,\n        6,\n        7\n    ]\n}"
+				}
+			]
+		}
+	]
+}
