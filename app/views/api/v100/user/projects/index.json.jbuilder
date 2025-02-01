@@ -7,4 +7,16 @@ json.data @projects do |project|
   json.name project.name
   json.start_date project.start_date
   json.duration project.duration
+
+  json.assigned_tasks project.tasks do |task|
+    json.id task.id
+    json.name task.name
+    json.description task.description
+    json.start_time task.start_time
+    json.end_time task.end_time
+    json.duration Project.display_hour(task.duration)
+    json.created_at task.created_at
+    json.updated_at task.updated_at
+  end
+    
 end

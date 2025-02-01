@@ -6,7 +6,7 @@ class Api::V100::AuthenticationController < Api::V100::ApiController
       token = JsonWebToken.encode(user_id: @user.id)
       time = Time.now + JsonWebToken::EXP.to_i
       render json: { token: token, exp: time.strftime("%m-%d-%Y %H:%M"),
-                     email: @user.email }, status: :ok
+                     email: @user.email, name: @user.name, role: @user.role }, status: :ok
     else
       render json: { error: 'unauthorized' }, status: :unauthorized
     end

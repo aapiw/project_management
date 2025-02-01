@@ -1,7 +1,8 @@
 class Api::V100::Admin::ProjectsController < Api::V100::Admin::ApiController
   def index
     if params[:active] == "true"
-      @projects = Project.active.includes(:tasks)
+      @projects = Project.active.includes(:tasks, :users)
+      @users = User.where(role:"user")
     else
       @projects = Project.all
     end

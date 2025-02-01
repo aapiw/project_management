@@ -1,10 +1,12 @@
 Rails.application.routes.draw do
+  get 'react/index'
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 
   concern :api_routes do |options|
     post "/auth/login", to: "authentication#login"
 
     namespace :admin do
+      resources :users, only: [:index]
       resources :projects, only: [:index] do
         member do
           post :assign_users
@@ -14,6 +16,7 @@ Rails.application.routes.draw do
     end
 
     namespace :user do
+      resources :tasks, only: [:index]
       resources :projects, only: [:index] do
         member do
           post :assign_tasks
@@ -29,6 +32,8 @@ Rails.application.routes.draw do
     end
   end
 
+  root "react#index"
+  
   # React fallback route
   get '*path', to: 'react#index', constraints: ->(req) { !req.xhr? && req.format.html? }
   

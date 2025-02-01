@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>YourApp</title>
+    <%= vite_client_tag %>
+    <%= vite_javascript_tag 'application.jsx' %>
+    <%= vite_stylesheet_tag 'application' %> <!-- Optional if you have CSS from Vite -->
+  </head>
+  <body>
+    <%= yield %> <!-- This will render your views -->
+  </body>
+</html>
