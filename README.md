@@ -18,9 +18,13 @@ Clone the project
 git clone git@github.com:aapiw/project_management.git
 ```
 
-And then execute:
+And then execute this under `project_management` dir:
 ```bash
-cd project_management && bundle install
+bundle install
+```
+
+```bash
+pnpm install
 ```
 
 Setup the DB:
@@ -33,13 +37,15 @@ RAILS_ENV=development rails db:drop; rails db:create; rails db:migrate; rails db
 # Run The Project
 Run the Backend:
 ```
-cd project_management && rails s
+rails s
 ```
 
 Run the Frontend in a new tab:
 ```
-cd project_management && bin/vite dev
+bin/vite dev
 ```
+
+Open http://localhost:3000/
 
 # Accounts
 Admin:
